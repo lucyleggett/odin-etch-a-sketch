@@ -22,12 +22,12 @@ function updateCanvas() {
 
 squaresContainer.addEventListener("mouseover",(event) => {
     if (event.target.tagName === "DIV" && event.target !== squaresContainer) {
-        event.target. style.backgroundColor = "lightblue";
+        event.target. style.backgroundColor = "black";
     }
 });
 
 const resetButton = document.querySelector("button");
-resetButton.addEventListener("click", (refreshCanvas) => {
+resetButton.addEventListener("click", (event) => {
     squaresContainer.replaceChildren();
     updateCanvas();
 })
