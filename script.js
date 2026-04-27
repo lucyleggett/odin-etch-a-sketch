@@ -1,16 +1,34 @@
+document.addEventListener('DOMContentLoaded', (updateCanvas))
+
 const squaresContainer = document.getElementById("container")
 const fragment = document.createDocumentFragment();
 
-for (let i = 0; i < 256; i++) {
-    const box = document.createElement("div");
-    box.classList.add("square");
-    fragment.appendChild(box);
-}
-
-squaresContainer.appendChild(fragment);
+function updateCanvas() {
+    
+    let squaresPerSide = prompt("How many squares would you like per side?");
+    if ((squaresPerSide != null) && (squaresPerSide <= 100)) {
+            for (let i = 0; i < (squaresPerSide ** 2); i++) {
+                const box = document.createElement("div");
+                box.classList.add("square");
+                const percentage = (100 / squaresPerSide)
+                box.style.flex = `0 0 ${percentage}%`;
+                fragment.appendChild(box);
+            }
+            squaresContainer.appendChild(fragment);
+        }
+        else {
+            alert("Please enter a number between 0 and 100.")
+        }
+        }
 
 squaresContainer.addEventListener("mouseover",(event) => {
-    if (event.target.tagName === "DIV" && event.target !== container) {
+    if (event.target.tagName === "DIV" && event.target !== squaresContainer) {
         event.target. style.backgroundColor = "lightblue";
     }
 });
+
+const resetButton = document.getElementById("reset");
+resetButton.addEventListener("click", (updateCanvas) => {
+        fragment.remove();
+        updateCanvas();
+})
