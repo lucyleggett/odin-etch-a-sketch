@@ -1,0 +1,15 @@
+#container {
+    display: flex;
+}
+
+.square {
+    flex-grow: 1;
+    flex-shrink:0;
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    flex-wrap: wrap;
+}
+
+.square:hover {
+    background-color: darkkhaki;
+}
