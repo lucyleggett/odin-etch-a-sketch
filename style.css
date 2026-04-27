@@ -6,10 +6,10 @@
 
 .square {
     flex: 0 0 6.25%;
-    width: 40px;
     aspect-ratio: 1 / 1;
 }
 
-.square:hover {
+/* .square:hover {
     background-color: darkkhaki;
-}
+} */
+
