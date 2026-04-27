@@ -4,12 +4,15 @@
     flex-wrap: wrap;
 }
 
+#fragment {
+    display: flex;
+}
+
 .square {
-    flex: 0 0 6.25%;
     aspect-ratio: 1 / 1;
 }
 
-/* .square:hover {
-    background-color: darkkhaki;
-} */
-
+button {
+    background-color: black;
+    color: white;
+}
