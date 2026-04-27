@@ -1,13 +1,13 @@
 #container {
     display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
 }
 
 .square {
-    flex-grow: 1;
-    flex-shrink:0;
+    flex: 0 0 6.25%;
     width: 40px;
     aspect-ratio: 1 / 1;
-    flex-wrap: wrap;
 }
 
 .square:hover {
