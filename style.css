@@ -10,8 +10,8 @@ body {
     background-color: red;
     padding: 0;
     border-radius: 30px;
+    width: 98vh;
     max-height: 98vh;
-    max-width: 970px;
     aspect-ratio: 1 / 1;
 }
 
