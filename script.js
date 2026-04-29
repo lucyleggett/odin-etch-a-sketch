@@ -1,7 +1,18 @@
-document.addEventListener('DOMContentLoaded', (updateCanvas))
+document.addEventListener("DOMContentLoaded", (initializeCanvas))
 
 const squaresContainer = document.getElementById("container");
 const fragment = document.createDocumentFragment();
+
+function initializeCanvas() {
+    for (let i = 0; i < (65 ** 2); i++) {
+            const box = document.createElement("div");
+            box.classList.add("square");
+            const percentage = (100 / 65);
+            box.style.flex = `0 0 ${percentage}%`;
+            fragment.appendChild(box);
+    }
+        squaresContainer.appendChild(fragment);
+};
 
 function updateCanvas() {
     let squaresPerSide = prompt("How many squares would you like per side on your Etch-a-Sketch?");
@@ -9,14 +20,14 @@ function updateCanvas() {
         for (let i = 0; i < (squaresPerSide ** 2); i++) {
             const box = document.createElement("div");
             box.classList.add("square");
-            const percentage = (100 / squaresPerSide)
+            const percentage = (100 / squaresPerSide);
             box.style.flex = `0 0 ${percentage}%`;
             fragment.appendChild(box);
         }
         squaresContainer.appendChild(fragment);
     }
     else {
-        alert("Please enter a number between 0 and 100.")
+        alert("Please enter a number from 1 to 100.")
     }
 };
 
