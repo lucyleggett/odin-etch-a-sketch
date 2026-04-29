@@ -19,7 +19,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 10vh;
 }
 
 p {
@@ -33,7 +33,7 @@ p {
 #bottom-border {
     display: flex;
     justify-content: space-between;
-    min-height: 100px;
+    height: 10vh;
     align-items: center;
 }
 
@@ -41,8 +41,8 @@ p {
     display: flex;
     flex-wrap: wrap;
     background-color:darkgray;
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 10vh;
+    margin-right: 10vh;
     min-height: 0;
 }
 
@@ -57,7 +57,7 @@ button {
     font-size: 20px;
 }
 
-img {    
+img {
     max-width: 90px;
     margin: 10px;
     height: auto;
