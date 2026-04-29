@@ -45,7 +45,6 @@ squaresContainer.addEventListener("mouseover",(event) => {
     }
 });
 
-
 const resetButton = document.querySelector("button");
 resetButton.addEventListener("click", (event) => {
     squaresContainer.replaceChildren();
